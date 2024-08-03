@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator</title>
+
+  <style>
+   body {
+      background-image: url('https://static.miraheze.org/projectsekaiwiki/f/f3/Nene_6.png'); 
+      background-size: cover; 
+      background-position: center;
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+   }
+
+   .calculator {
+     border-radius: 20px;
+     padding: 20px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 2);
+     text-align: center;
+     color: #fff;
+     width: 300px;
+   }
+
+   h1 {
+     margin-top: 0;
+     font-size: 24px;
+     color: rgb(171, 164, 164)
+   }
+
+   input[type="text"] {
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 2);
+     padding: 10px;
+     width: 100%;
+     border: none;
+     border-bottom: 2px solid #424242;
+     background-color: transparent;
+     font-size: 18px;
+     color: #fff;
+     text-align: center;
+     margin-bottom: 10px;
+   }
+
+   .buttons {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 10px;
+   }
+
+   input[type="button"] {
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 2);
+     background-color: #424242;
+     border-radius: 10px;
+     color: #afacac;
+     border: none;
+     padding: 10px 0;
+     font-size: 18px;
+     cursor: pointer;
+   }
+   input[type="button"]:hover {
+     background-color: #616161;
+
+   }
+   input[type="reset"] {
+     background-color: #424242;
+     border-radius: 10px;
+     color: #afacac;
+     border: none;
+     padding: 10px 8px;
+     font-size: 18px;
+     cursor: pointer;
+   }
+   input[type="reset"]:hover {
+     background-color: #616161;
+   }
+ </style>
+</head>
+<body>
+<script>
+function jumlah() {
+  var bill = parseFloat(document.fform.angka1.value);
+  if (isNaN(bill))
+    bill = 0.0;
+  var bill2 = parseFloat(document.fform.angka2.value);
+  if (isNaN(bill2))
+    bill2 = 0.0;
+  var hasil = bill / bill2;
+  alert("Hasil Penjumlahan = " + hasil);
+}
+</script>
+<div class="calculator">
+  <h1>Kalkulator</h1>
+  <form name="fform">
+    <input type="text" name="angka1" placeholder="Masukkan angka pertama">
+    <input type="text" name="angka2" placeholder="Masukkan angka kedua">
+    <br><br>
+    <input type="button" value="Jumlahkan" onclick="jumlah()">
+    <input type="reset" value="Ulang">
+  </form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
